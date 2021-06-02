@@ -20,7 +20,7 @@ class SelfAttention(nn.Module):
 
     def forward(self, values, keys, query, mask):
         # Get number of training examples
-        N = query.shape[0]
+        N = query.shape[0] #The number of examples we send at the same time 
 
         value_len, key_len, query_len = values.shape[1], keys.shape[1], query.shape[1]
 
